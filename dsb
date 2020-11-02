@@ -1,0 +1,10 @@
+#!/bin/sh
+
+DSB=
+
+for x in $HOME/dsb/dsb.d/*
+do
+	DSB="${DSB} $(${x})";
+done;
+
+xsetroot -name "${DSB}";
