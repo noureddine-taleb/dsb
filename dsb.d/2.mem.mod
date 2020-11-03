@@ -1,3 +1,3 @@
 #!/bin/sh
 
-free -h | awk '/^Mem/ { print $3 }'
+free | awk '/^Mem/ { printf "%dMi(%d%)", $3/1000, $3/$2*100 }'
